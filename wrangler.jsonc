@@ -8,5 +8,6 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS",
   },
+  "routes": [{ "pattern": "getbuttons.tech", "custom_domain": true }],
   "observability": { "enabled": true },
 }
