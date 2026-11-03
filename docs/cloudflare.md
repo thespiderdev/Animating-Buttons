@@ -1,6 +1,6 @@
 # Cloudflare deployment
 
-The application uses Cloudflare Workers with OpenNext and Worker static assets.
+Production runs at [getbuttons.tech](https://getbuttons.tech) on the `getbuttons` Cloudflare Worker. OpenNext serves the application, and Workers Assets serves the imported catalogue.
 
 ## Local preview
 
