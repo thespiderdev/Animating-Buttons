@@ -75,13 +75,16 @@ async function runQuery(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ structuredQuery: query }),
-    next: { revalidate: 300, tags: ["public-buttons"] },
+    next: { revalidate: 3600, tags: ["public-buttons"] },
   });
   if (!response.ok)
     throw new Error("The public collection is temporarily unavailable.");
   const rows = (await response.json()) as Array<{
     document?: FirestoreDocument;
+    error?: { status?: string };
   }>;
+  if (rows.some((row) => row.error))
+    throw new Error("The public collection is temporarily unavailable.");
   return rows.flatMap((row) => (row.document ? [row.document] : []));
 }
 function date(value: unknown): string | undefined {
@@ -110,6 +113,11 @@ export const getPublicCatalogue = cache(
           "updatedAt",
         ].map((fieldPath) => ({ fieldPath })),
       },
+    }).catch(() => {
+      console.warn(
+        "Firestore catalogue unavailable. Serving imported buttons.",
+      );
+      return [];
     });
     const community: PublicButtonSummary[] = documents.flatMap((document) => {
       const data = fields(document);

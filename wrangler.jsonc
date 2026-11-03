@@ -9,5 +9,11 @@
     "binding": "ASSETS",
   },
   "routes": [{ "pattern": "getbuttons.tech", "custom_domain": true }],
+  "kv_namespaces": [
+    {
+      "binding": "NEXT_INC_CACHE_KV",
+      "id": "f367847cbc7c413dade529bd93367899",
+    },
+  ],
   "observability": { "enabled": true },
 }

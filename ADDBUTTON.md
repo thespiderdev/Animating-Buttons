@@ -15,7 +15,7 @@ Follow these steps to add a button to the Animating Buttons project:
 
 #### 1. Access the Website :
 
-Visit the [Animating Buttons](https://lets-animate-btns.vercel.app/) website.
+Visit the [Animating Buttons](https://getbuttons.tech/) website.
 
 #### 2. Login with GitHub :
 
