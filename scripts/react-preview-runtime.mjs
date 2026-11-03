@@ -59,9 +59,9 @@ class PreviewBoundary extends React.Component {
 }
 
 globalThis.renderButton = (factory) => {
-  const module = { exports: {} };
+  const componentModule = { exports: {} };
   try {
-    factory(module, module.exports, (name) => {
+    factory(componentModule, componentModule.exports, (name) => {
       if (!Object.hasOwn(modules, name)) throw new Error("Unsupported import");
       return modules[name];
     });
@@ -74,7 +74,7 @@ globalThis.renderButton = (factory) => {
       React.createElement(
         PreviewBoundary,
         null,
-        React.createElement(module.exports.default),
+        React.createElement(componentModule.exports.default),
       ),
     );
   } catch {
