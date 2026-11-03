@@ -83,15 +83,15 @@ export default function CommunityPrompt() {
             duration: reduceMotion ? 0 : 0.7,
             ease: [0.32, 0.72, 0, 1],
           }}
-          className="fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-40 rounded-3xl border border-foreground/10 bg-white p-6 font-runde text-foreground shadow-2xl sm:right-6 sm:bottom-6 sm:left-auto sm:w-96 dark:bg-[#1F1F1F]"
+          className="fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-40 rounded-3xl border border-foreground/10 bg-white p-4 font-runde text-foreground shadow-2xl sm:right-6 sm:bottom-6 sm:left-auto sm:w-80 dark:bg-[#1F1F1F]"
         >
           <div className="flex items-center justify-between">
-            <BrandMark size={40} />
+            <BrandMark size={32} />
             <button
               type="button"
               onClick={dismiss}
               aria-label="Dismiss community prompt"
-              className="-mt-2 -mr-2 flex size-11 items-center justify-center rounded-xl text-muted-foreground transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-foreground/5 hover:text-foreground active:scale-95"
+              className="-my-2 -mr-2 flex size-11 items-center justify-center rounded-xl text-muted-foreground transition-colors duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-foreground/5 hover:text-foreground active:scale-95"
             >
               <svg
                 aria-hidden="true"
@@ -108,7 +108,7 @@ export default function CommunityPrompt() {
           </div>
           <h2
             id="community-prompt-title"
-            className="mt-4 text-lg font-semibold text-balance"
+            className="mt-3 text-lg font-semibold text-balance"
           >
             Enjoying Animating Buttons?
           </h2>
@@ -116,19 +116,18 @@ export default function CommunityPrompt() {
             id="community-prompt-description"
             className="mt-2 text-sm text-pretty text-muted-foreground"
           >
-            Star the repo and follow along on X for new buttons and project
-            updates.
+            Follow for new buttons, or star the project on GitHub.
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-3">
+          <div className="mt-4 grid grid-cols-2 gap-2">
             <a
               href={SITE_X}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Follow the creator on X (opens in a new tab)"
-              className="action-secondary text-base"
+              className="action-secondary rounded-xl px-3 py-2 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span aria-hidden="true">
-                <XLogo className="size-5" />
+                <XLogo className="size-4" />
               </span>
               Follow
             </a>
@@ -137,12 +136,12 @@ export default function CommunityPrompt() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Animating Buttons on GitHub to star it (opens in a new tab)"
-              className="action-primary text-base"
+              className="action-primary rounded-xl px-3 py-2 whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-2"
             >
               <span aria-hidden="true">
-                <GithubLogo className="size-5" />
+                <GithubLogo className="size-4" />
               </span>
-              Star on GitHub
+              Star
             </a>
           </div>
         </motion.aside>
