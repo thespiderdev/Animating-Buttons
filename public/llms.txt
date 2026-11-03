@@ -1,0 +1,25 @@
+# Animating Buttons
+
+> An open source community collection of animated buttons for web developers. Examples use HTML, CSS, Tailwind CSS, JavaScript and React with TypeScript.
+
+## Public pages
+- [Home](https://getbuttons.tech/): Project overview and published button examples.
+- [Button catalogue](https://getbuttons.tech/buttons): Search and filter button effects. Numbered catalogue pages link to published examples.
+- [FAQ](https://getbuttons.tech/faq): Using code, Tailwind support, React adaptation, licensing, contributions and browser storage.
+- [Community](https://getbuttons.tech/leaderboard): Creators ranked by likes on published buttons.
+- [Workshop](https://getbuttons.tech/add): HTML, CSS, Tailwind CSS v4 and JavaScript editor with preview controls.
+- [Sponsors](https://getbuttons.tech/sponsors): Support the project and learn about sponsorship placements.
+- [About](https://getbuttons.tech/about): Project background and identity.
+- [Privacy](https://getbuttons.tech/privacy): Public contributions, authentication, server compilation and browser storage.
+- [Terms](https://getbuttons.tech/terms): Code reuse, author notices and contribution rules.
+- [Sitemap](https://getbuttons.tech/sitemap.xml): Published buttons, creator profiles and catalogue pages.
+- [Source repository](https://github.com/thespiderdev/Animating-Buttons): Source code and MIT project license.
+
+## Product facts
+Browsing, previewing and downloading are free. GitHub sign-in is required for likes, submissions and profile management. The collection accepts individual buttons and groups of up to six controls, not full pages or unrelated components. New submissions and creator edits require moderation.
+
+Tailwind utilities are compiled from complete class names in HTML and JavaScript. Exports include compiled CSS and standalone HTML/CSS/JavaScript files. React examples provide original TSX files and dependencies. Standalone HTML examples can be adapted to React or Next.js.
+
+Drafts and saved collections are stored in this browser without account sync. Collection backups can be exported and imported. Accessibility checks are guidance and require manual testing. Individual author and license notices apply to code reuse.
+
+This file is an optional plain-text guide. The public pages and their visible content remain the authoritative source.

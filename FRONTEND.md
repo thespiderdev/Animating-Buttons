@@ -1,3 +1,5 @@
+> Migration note: this document describes the previous Create React App setup. For the current Next.js architecture and commands, see [README.md](README.md).
+
 # Contributing to Frontend ✨🚀
 
 Welcome to the Animating Buttons project! If you're interested in contributing to the frontend of this project, you're in the right place. This guide will walk you through the process of setting up the frontend environment and making contributions.

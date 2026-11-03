@@ -1,3 +1,5 @@
+> Migration note: this document describes the previous Create React App setup. For the current Next.js architecture and commands, see [README.md](README.md).
+
 ## Contributing Guidelines 🤝
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-yellow.svg?style=flat-square)](http://makeapullrequest.com)

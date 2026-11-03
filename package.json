@@ -1,50 +1,71 @@
 {
-  "name": "Animating-Buttons",
-  "version": "1.0.0",
+  "name": "animating-buttons",
+  "version": "2.0.0",
   "private": true,
-  "dependencies": {
-    "@monaco-editor/react": "^4.5.2",
-    "@testing-library/jest-dom": "^6.1.2",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "axios": "^1.5.0",
-    "file-saver": "^2.0.5",
-    "firebase": "^10.3.1",
-    "framer-motion": "^10.16.2",
-    "jszip": "^3.10.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-firebase-hooks": "^5.1.1",
-    "react-hot-toast": "^2.4.1",
-    "react-icons": "^4.10.1",
-    "react-router-dom": "^6.15.0",
-    "web-vitals": "^3.4.0"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "build:cloudflare": "opennextjs-cloudflare build && node scripts/sanitize-worker-env.mjs",
+    "preview:cloudflare": "opennextjs-cloudflare preview",
+    "deploy:cloudflare": "opennextjs-cloudflare deploy",
+    "postinstall": "node scripts/prepare-tailwind.mjs"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@radix-ui/react-select": "^2.4.1",
+    "@squircle-js/react": "^1.3.0",
+    "clsx": "^2.1.1",
+    "firebase": "^10.14.1",
+    "jszip": "^3.10.1",
+    "lucide-react": "^1.20.0",
+    "motion": "^12.40.0",
+    "next": "16.2.9",
+    "next-themes": "^0.4.6",
+    "parse5": "^8.0.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-use-measure": "^2.1.7",
+    "sonner": "^2.0.8",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1"
+    "@base-ui/react": "^1.9.0",
+    "@hugeicons/core-free-icons": "^4.4.0",
+    "@hugeicons/react": "^1.1.10",
+    "@iconify/react": "^6.0.4",
+    "@opennextjs/cloudflare": "1.19.8",
+    "@paper-design/shaders-react": "^0.0.82",
+    "@radix-ui/react-icons": "^1.3.2",
+    "@remixicon/react": "^4.9.0",
+    "@tabler/icons-react": "^3.50.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "border-beam": "^1.4.1",
+    "canvas-confetti": "^1.9.4",
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.5.2",
+    "esbuild": "^0.28.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "google-auth-library": "^11.3.2",
+    "lucide": "^1.66.0",
+    "matter-js": "^0.20.0",
+    "metal-fx": "^2.0.11",
+    "morphicons": "^2.0.2",
+    "postcss": "^8.5.32",
+    "prettier": "3.8.4",
+    "radix-ui": "^1.8.1",
+    "react-aria-components": "^1.22.1",
+    "typescript": "^5",
+    "usehooks-ts": "^3.1.1",
+    "wrangler": "4.97.0"
   }
 }

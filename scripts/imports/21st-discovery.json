@@ -1,0 +1,642 @@
+{
+  "note": "Public author/source discovery from button-related links in the 21st category snapshot; this is not a complete catalogue inventory.",
+  "creators": [
+    {
+      "author": "Astryxdesign",
+      "name": "Astryx",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@Astryxdesign",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "antdesign",
+      "name": "antdesign",
+      "github": [
+        "https://github.com/ant-design"
+      ],
+      "website": [],
+      "profile": "https://21st.dev/@antdesign",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "beratberkayg",
+      "name": "Berat Berkay Gökdemir",
+      "github": [
+        "https://github.com/beratberkayg"
+      ],
+      "website": [
+        "https://teamsolo.dev"
+      ],
+      "profile": "https://21st.dev/@beratberkayg",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "clevision",
+      "name": "Clevision",
+      "github": [
+        "https://github.com/shadcnstudio"
+      ],
+      "website": [
+        "https://shadcnstudio.com/"
+      ],
+      "profile": "https://21st.dev/@clevision",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "cnippet-dev",
+      "name": "Cnippet",
+      "github": [
+        "https://github.com/cnippet-dev"
+      ],
+      "website": [
+        "https://ui.cnippet.dev"
+      ],
+      "profile": "https://21st.dev/@cnippet-dev",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "crysta1221",
+      "name": "crysta1221",
+      "github": [
+        "https://github.com/Crysta1221"
+      ],
+      "website": [
+        "https://shadcn-m3e.crystaworld.dev"
+      ],
+      "profile": "https://21st.dev/@crysta1221",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "cult-ui",
+      "name": "cult/ui",
+      "github": [
+        "https://github.com/nolly-studio/cult-ui"
+      ],
+      "website": [
+        "https://www.cult-ui.com/"
+      ],
+      "profile": "https://21st.dev/@cult-ui",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "designali-in",
+      "name": "Ali Imam",
+      "github": [
+        "https://github.com/designali-com"
+      ],
+      "website": [
+        "https://aliimam.in"
+      ],
+      "profile": "https://21st.dev/@designali-in",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "dillionverma",
+      "name": "Dillion Verma",
+      "github": [
+        "https://github.com/magicuidesign/magicui"
+      ],
+      "website": [
+        "https://magicui.design/?ref=serafim"
+      ],
+      "profile": "https://21st.dev/@dillionverma",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "edwinvakayil",
+      "name": "Edwin Vakayil",
+      "github": [],
+      "website": [
+        "https://iconiqui.com"
+      ],
+      "profile": "https://21st.dev/@edwinvakayil",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "efferd",
+      "name": "Efferd",
+      "github": [
+        "https://github.com/shabanhr"
+      ],
+      "website": [
+        "https://efferd.com"
+      ],
+      "profile": "https://21st.dev/@efferd",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "extend-hq",
+      "name": "extend-hq",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@extend-hq",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "felipemenezes098",
+      "name": "felipemenezes098",
+      "github": [],
+      "website": [
+        "https://ui.flexnative.com"
+      ],
+      "profile": "https://21st.dev/@felipemenezes098",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "hero_ui",
+      "name": "Hero Ui",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@hero_ui",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "hyperiux",
+      "name": "Hyperiux Vault",
+      "github": [
+        "https://github.com/Hyperiux-Immersion-Labs/hyperiux-components"
+      ],
+      "website": [
+        "https://vault.hyperiux.com"
+      ],
+      "profile": "https://21st.dev/@hyperiux",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "iamsatish4564",
+      "name": "iamsatish4564",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@iamsatish4564",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "jahed",
+      "name": "Hossain Jahed",
+      "github": [
+        "https://github.com/rabden"
+      ],
+      "website": [
+        "https://21st.dev/community/easemize"
+      ],
+      "profile": "https://21st.dev/@jahed",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "johuniq",
+      "name": "johuniq",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@johuniq",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "jolbol1",
+      "name": "James Shopland",
+      "github": [
+        "https://github.com/jolbol1"
+      ],
+      "website": [
+        "https://www.jollyui.dev/"
+      ],
+      "profile": "https://21st.dev/@jolbol1",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "kanchanasw",
+      "name": "kanchanasw",
+      "github": [
+        "https://github.com/KanchanaSW"
+      ],
+      "website": [
+        "https://doodle-ui.netlify.app/"
+      ],
+      "profile": "https://21st.dev/@kanchanasw",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "lipa88-mk",
+      "name": "lipa88-mk",
+      "github": [
+        "https://github.com/lipa88-mk"
+      ],
+      "website": [
+        "https://lipa88-mk.github.io/components-library/"
+      ],
+      "profile": "https://21st.dev/@lipa88-mk",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "moazamtrade",
+      "name": "Jessi",
+      "github": [
+        "https://github.com/moazamtech/shadway"
+      ],
+      "website": [
+        "https://shadway.online"
+      ],
+      "profile": "https://21st.dev/@moazamtrade",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "molecule-lab-rushil",
+      "name": "Rushil Dhinoja",
+      "github": [
+        "https://github.com/molecule-lab/molecule-ui"
+      ],
+      "website": [
+        "https://moleculeui.design"
+      ],
+      "profile": "https://21st.dev/@molecule-lab-rushil",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "moumensoliman",
+      "name": "Moumen Soliman",
+      "github": [
+        "https://github.com/moumen-soliman/uitripled"
+      ],
+      "website": [
+        "https://ui.tripled.work/"
+      ],
+      "profile": "https://21st.dev/@moumensoliman",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "olivier_1b6cd5bc",
+      "name": "Bar",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@olivier_1b6cd5bc",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "originui",
+      "name": "Origin UI",
+      "github": [
+        "https://github.com/origin-space/originui"
+      ],
+      "website": [
+        "https://originui.com/"
+      ],
+      "profile": "https://21st.dev/@originui",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "preetsuthar17",
+      "name": "Preet Suthar",
+      "github": [
+        "https://github.com/preetsuthar17/hextaui"
+      ],
+      "website": [
+        "https://hextaui.com"
+      ],
+      "profile": "https://21st.dev/@preetsuthar17",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "radiumcoders",
+      "name": "jay sharma",
+      "github": [
+        "https://github.com/radiumcoders"
+      ],
+      "website": [
+        "https://radiumcoders.com"
+      ],
+      "profile": "https://21st.dev/@radiumcoders",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "reshaped",
+      "name": "reshaped",
+      "github": [
+        "https://github.com/reshaped-ui/reshaped"
+      ],
+      "website": [],
+      "profile": "https://21st.dev/@reshaped",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "reuno-ui",
+      "name": "reuno-ui",
+      "github": [],
+      "website": [
+        "https://skiper-ui.com/"
+      ],
+      "profile": "https://21st.dev/@reuno-ui",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "ruixen.ui",
+      "name": "Ruixen",
+      "github": [
+        "https://github.com/ruixenui"
+      ],
+      "website": [
+        "https://ruixen.com"
+      ],
+      "profile": "https://21st.dev/@ruixen.ui",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "sean0205",
+      "name": "Sean Hello",
+      "github": [
+        "https://github.com/keenthemes/reui"
+      ],
+      "website": [
+        "https://reui.io"
+      ],
+      "profile": "https://21st.dev/@sean0205",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "senommu",
+      "name": "Vlad Vovk",
+      "github": [
+        "https://github.com/senommu"
+      ],
+      "website": [
+        "https://llaunch.dev"
+      ],
+      "profile": "https://21st.dev/@senommu",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "serafimcloud",
+      "name": "Serafim",
+      "github": [
+        "https://github.com/serafimcloud"
+      ],
+      "website": [],
+      "profile": "https://21st.dev/@serafimcloud",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "shadcn",
+      "name": "shadcn",
+      "github": [
+        "https://github.com/shadcn-ui/ui"
+      ],
+      "website": [
+        "https://ui.shadcn.com/"
+      ],
+      "profile": "https://21st.dev/@shadcn",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "shadcnspace",
+      "name": "ShadcnSpace",
+      "github": [
+        "https://github.com/shadcnspace"
+      ],
+      "website": [
+        "http://www.shadcnspace.com"
+      ],
+      "profile": "https://21st.dev/@shadcnspace",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "shugar",
+      "name": "tigran tumasov",
+      "github": [
+        "https://github.com/shugar"
+      ],
+      "website": [],
+      "profile": "https://21st.dev/@shugar",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "theorcdev",
+      "name": "OrcDev",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@theorcdev",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "tom_ui",
+      "name": "tom",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@tom_ui",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "tommyjepsen",
+      "name": "Tommy Jepsen",
+      "github": [
+        "https://github.com/tommyjepsen"
+      ],
+      "website": [
+        "https://www.tommyjepsen.com/"
+      ],
+      "profile": "https://21st.dev/@tommyjepsen",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "uilayout.contact",
+      "name": "ui layout",
+      "github": [
+        "https://github.com/naymurdev"
+      ],
+      "website": [
+        "https://ui-layouts.com/"
+      ],
+      "profile": "https://21st.dev/@uilayout.contact",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "voxlet-ui",
+      "name": "Voxlet UI",
+      "github": [
+        "https://github.com/voxletlabs/voxlet-ui"
+      ],
+      "website": [
+        "voxlet-ui.vercel.app"
+      ],
+      "profile": "https://21st.dev/@voxlet-ui",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "waleedkibhen",
+      "name": "waiz",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@waleedkibhen",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "wensity",
+      "name": "Wensity Labs",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@wensity",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "xubohuah",
+      "name": "Kain Xu",
+      "github": [
+        "https://github.com/xubohuah"
+      ],
+      "website": [
+        "https://xubh.me/"
+      ],
+      "profile": "https://21st.dev/@xubohuah",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "Codehagen",
+      "name": "Prism UI",
+      "github": [
+        "https://github.com/codehagen/prismui"
+      ],
+      "website": [
+        "https://www.prismui.tech/"
+      ],
+      "profile": "https://21st.dev/@Codehagen",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "abishek1512",
+      "name": "Abishekaraj Immanuel",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@abishek1512",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "adobe",
+      "name": "py_ets",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@adobe",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "coss.com",
+      "name": "coss",
+      "github": [],
+      "website": [
+        "https://coss.com/ui"
+      ],
+      "profile": "https://21st.dev/@coss.com",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "demonstrikk",
+      "name": "Demon Strikk",
+      "github": [
+        "https://github.com/demonstrikkk"
+      ],
+      "website": [
+        "https://yash-portfolio-zeta-eight.vercel.app"
+      ],
+      "profile": "https://21st.dev/@demonstrikk",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "ekmas",
+      "name": "Samuel Breznjak",
+      "github": [
+        "https://github.com/ekmas"
+      ],
+      "website": [
+        "https://samuelbreznjak.com"
+      ],
+      "profile": "https://21st.dev/@ekmas",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "kevingirelli",
+      "name": "kevingirelli",
+      "github": [
+        "https://github.com/KevinGirelli"
+      ],
+      "website": [
+        "https://corsairui.vercel.app"
+      ],
+      "profile": "https://21st.dev/@kevingirelli",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "kl-webmedia",
+      "name": "WunderUI",
+      "github": [],
+      "website": [],
+      "profile": "https://21st.dev/@kl-webmedia",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "kokonutd",
+      "name": "Kokonut UI",
+      "github": [
+        "https://github.com/kokonut-labs/kokonutui"
+      ],
+      "website": [
+        "https://kokonutui.com/"
+      ],
+      "profile": "https://21st.dev/@kokonutd",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "muhammad-binsalman",
+      "name": "M.bin Salman",
+      "github": [
+        "https://github.com/Muhammad-BinSalman"
+      ],
+      "website": [],
+      "profile": "https://21st.dev/@muhammad-binsalman",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "nextjsshop",
+      "name": "nextjs shop",
+      "github": [],
+      "website": [
+        "https://nextjsshop.com/"
+      ],
+      "profile": "https://21st.dev/@nextjsshop",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "purnavu-12",
+      "name": "purnavu-12",
+      "github": [
+        "https://github.com/Purnavu-12"
+      ],
+      "website": [
+        "https://build-with-me-ui.vercel.app"
+      ],
+      "profile": "https://21st.dev/@purnavu-12",
+      "publicUpstreamImported": true
+    },
+    {
+      "author": "saurabh-2607",
+      "name": "Saurabh Sharma",
+      "github": [
+        "https://github.com/Saurabh-2607"
+      ],
+      "website": [
+        "https://srbh.site"
+      ],
+      "profile": "https://21st.dev/@saurabh-2607",
+      "publicUpstreamImported": false
+    },
+    {
+      "author": "tom_ui",
+      "name": "tom",
+      "profile": "https://21st.dev/@tom_ui",
+      "github": [
+        "https://github.com/xxtomm/spell-ui"
+      ],
+      "website": [
+        "https://spell.sh"
+      ],
+      "sourceEvidence": "https://21st.dev/@tom_ui/components/flow-button",
+      "publicUpstreamImported": true
+    }
+  ]
+}

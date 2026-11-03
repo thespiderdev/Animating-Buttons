@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-11-02T18:49:08.287Z",
+  "scope": "Six missing component previews inspected through their rendered iframe DOM; complete preview HTML saved locally, without source unlocks.",
+  "sourceViewsConsumed": 0,
+  "entries": [
+    {
+      "pageUrl": "https://21st.dev/@tom_ui/components/flow-button",
+      "iframeUrl": "https://cdn.21st.dev/larsen66/flow-button/default/bundle.1773090683139.html?theme=dark&dark=true",
+      "htmlBytes": 258800,
+      "sourceMapMarkers": [],
+      "publisherSource": "https://spell.sh/docs/flow-button",
+      "originalSourceFound": "https://github.com/xxtomm/spell-ui",
+      "htmlCharacters": 258796,
+      "previewSha256": "bf6146dd4df5e5eeb275c8b636b1b8b1a5f0e7a27ff5fffd5a457d1c8827d590",
+      "finding": "compiled-preview-without-original-tsx-or-source-map"
+    },
+    {
+      "pageUrl": "https://21st.dev/@Shatlyk1011/components/gradient-borders-button",
+      "iframeUrl": "https://cdn.21st.dev/larsen66/gradient-borders-button/demos/default/bundle.1773180369585.html?theme=dark&dark=true",
+      "publisherSources": [],
+      "title": "Gradient Borders Button",
+      "htmlBytes": 258212,
+      "sourceMapMarkers": [],
+      "htmlCharacters": 258208,
+      "previewSha256": "f5d4d2a13e95b2cf661cce2f59bfc4aa5f40b29678e7fa67460e21a3608d5e25",
+      "finding": "compiled-preview-without-original-tsx-or-source-map"
+    },
+    {
+      "pageUrl": "https://21st.dev/@serafimcloud/components/button-retro",
+      "iframeUrl": "https://cdn.21st.dev/larsen66/button-retro/default/bundle.1760290102489.html?theme=dark&dark=true",
+      "publisherSources": [],
+      "title": "Button Retro",
+      "htmlBytes": 259475,
+      "sourceMapMarkers": [],
+      "htmlCharacters": 259471,
+      "previewSha256": "2fe0db6c1e080ce8c91691a6bd04d4af9105060d2fcd193fcec243fc947b7caa",
+      "finding": "compiled-preview-without-original-tsx-or-source-map"
+    },
+    {
+      "pageUrl": "https://21st.dev/@uniquesonu/components/amazing-button-component",
+      "iframeUrl": "https://cdn.21st.dev/uniquesonu/amazing-button-component/default/bundle.1753126617896.html?theme=dark&dark=true",
+      "publisherSources": [],
+      "title": "Amazing Button Component",
+      "htmlBytes": 364277,
+      "sourceMapMarkers": [],
+      "htmlCharacters": 364273,
+      "previewSha256": "b4ac8689860710e6a1c27012fb37f618dab7dfaf9f872e987a225bb501fea515",
+      "finding": "compiled-preview-without-original-tsx-or-source-map"
+    },
+    {
+      "pageUrl": "https://21st.dev/@serafimcloud/components/fey-button",
+      "iframeUrl": "https://cdn.21st.dev/bundled/550.html?theme=dark&dark=true",
+      "publisherSources": [],
+      "title": "Fey.com Button",
+      "htmlBytes": 334235,
+      "sourceMapMarkers": [],
+      "htmlCharacters": 334229,
+      "previewSha256": "2a2d9377e59159d6c2b569cfd0f3d201eaf0d3b92522380dc53751b2eae7e1f8",
+      "finding": "compiled-preview-without-original-tsx-or-source-map"
+    },
+    {
+      "pageUrl": "https://21st.dev/@tom_ui/components/pop-button",
+      "iframeUrl": "https://cdn.21st.dev/larsen66/pop-button/default/bundle.1773097572670.html?theme=dark&dark=true",
+      "publisherSources": [],
+      "title": "Pop Button",
+      "htmlBytes": 264805,
+      "sourceMapMarkers": [],
+      "htmlCharacters": 264801,
+      "previewSha256": "47c4e551472054c8f55e56ad640da3dd8a6630aaad4114ae6618ae3986100738",
+      "finding": "compiled-preview-without-original-tsx-or-source-map"
+    }
+  ],
+  "importedPublisherSource": {
+    "publisher": "Spell UI",
+    "repository": "https://github.com/xxtomm/spell-ui",
+    "discoveredOn": "https://21st.dev/@tom_ui/components/flow-button",
+    "publisherDocs": "https://spell.sh/docs/flow-button",
+    "newExamples": 11
+  }
+}

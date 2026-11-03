@@ -35,3 +35,19 @@ export_to_firebase_users.py
 serviceAccountKey.json
 remove_redundant_users.py
 serviceAccountKeyMain.json
+.vercel
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+design/shots/
+
+# Cloudflare Workers
+.open-next/
+.wrangler/
+.dev.vars*
+lib/tailwind-styles.generated.json
