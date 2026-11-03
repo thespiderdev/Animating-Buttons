@@ -1,3 +1,4 @@
+import PageViewTracker from "@/components/community/page-view-tracker";
 import type { Metadata, Viewport } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
@@ -146,6 +147,7 @@ export default function RootLayout({
             </a>
             <div className="flex flex-1 flex-col">{children}</div>
             <CommunityPrompt />
+            <PageViewTracker />
           </CommunityProvider>
         </ThemeProvider>
       </body>

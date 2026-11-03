@@ -61,7 +61,9 @@ export default function PrivacyPage() {
         </p>
         <p className="mt-3">
           When enabled, Cloudflare Web Analytics measures page views without
-          analytics cookies. The Sponsors page displays an aggregate total.
+          analytics cookies. The Sponsors counter saves cumulative counts by
+          public page path without storing IP addresses, account identifiers, or
+          query strings.
         </p>
       </section>
       <section aria-labelledby="local-edits">

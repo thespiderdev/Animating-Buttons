@@ -20,20 +20,13 @@ The FAQ, factual introductions, creator attribution, readable source, consistent
 
 ## Verify and launch
 
-Enable [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/) for `getbuttons.tech`. The Sponsors page shows cumulative recorded views across the site since tracking began. It reads completed UTC days from Firebase and gives the most recent completed day time to settle.
+The Sponsors counter reads the lifetime total from the Cloudflare D1 binding `PAGE_VIEWS`. It counts visible visits to public pages and client-side navigation. D1 stores counts by path and a site-wide total. The separate Cloudflare Web Analytics dashboard has its own reporting and historical data.
 
-1. Set `SITE_VIEWS_START_DATE` to the first UTC day of tracking on both the app and the sync job. Use the same Firebase project on both.
-2. Schedule `node --env-file-if-exists=.env scripts/sync-site-views.mjs` daily. Give the job Google Application Default Credentials with Firestore write access and set `CLOUDFLARE_ANALYTICS_TOKEN` (account Analytics Read), `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_ANALYTICS_SITE_TAG` (the analytics property ID). These credentials are needed only by the sync job.
-3. Merge this rule into the existing Firestore rules to allow reading the public daily counts. Writes use the job's service account and IAM.
+Apply the D1 migration before the first deploy or after changing the schema:
 
-```text
-match /sitePageViews/{day} {
-  allow read: if true;
-  allow write: if false;
-}
+```sh
+npx wrangler d1 migrations apply getbuttons-page-views --remote
 ```
-
-The job refreshes the last seven completed UTC days and replaces each day's record by date. To backfill retained history or repair a gap, pass a start date and an exclusive end date in chunks of up to seven days. The Sponsors page displays “Unavailable” when any required day is missing. Views before tracking began or outside Cloudflare's retained history cannot be recovered from Cloudflare.
 
 With the app running, use:
 
