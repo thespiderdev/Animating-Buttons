@@ -21,6 +21,12 @@
       "database_name": "getbuttons-page-views",
       "database_id": "1edceb42-4fe7-4873-bc00-f5ed61bc09b9",
     },
+    {
+      "binding": "SPONSOR_ORDERS",
+      "database_name": "getbuttons-sponsor-orders",
+      "database_id": "31273146-ddb3-47fa-92ed-18aa1267d33e",
+      "migrations_dir": "migrations/sponsors",
+    },
   ],
   "ratelimits": [
     {

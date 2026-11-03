@@ -1,3 +1,4 @@
+import { paymentFirstEnabled } from "@/lib/sponsor-orders";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import PageShell from "@/components/community/page-shell";
@@ -102,6 +103,7 @@ export default async function Page({
       <SponsorWall />
       <Sponsorship
         checkoutMode={sponsorCheckoutMode()}
+        paymentFirst={paymentFirstEnabled()}
         error={params.checkout_error?.slice(0, 240)}
       />
       <section className="mt-16 grid gap-8 sm:grid-cols-2">

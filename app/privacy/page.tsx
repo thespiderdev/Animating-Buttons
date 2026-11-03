@@ -79,12 +79,13 @@ export default function PrivacyPage() {
       <section aria-labelledby="sponsor-data">
         <h2 id="sponsor-data">Sponsorship checkout</h2>
         <p>
-          If you choose a sponsorship plan, your submitted brand name, website
-          and optional logo URL are sent to Dodo Payments as order metadata.
           Dodo collects payment and billing details on its hosted checkout. We
-          use the order and brand details to review and fulfill your placement.
-          Approved sponsor names, logos and links are public. Payment status and
-          receipts are not published on the site.
+          use your order and submitted brand details to review and fulfill your
+          placement. The earlier checkout flow stores brand details as Dodo
+          order metadata. The payment-first flow stores them in our private
+          order database and uses a cookie to let you return in the same
+          browser. Approved sponsor names, logos and links are public. Payment
+          status and receipts are not published on the site.
         </p>
       </section>
       <section aria-labelledby="privacy-contact">

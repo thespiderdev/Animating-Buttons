@@ -11,9 +11,11 @@ import {
 } from "@/lib/sponsors";
 export default function Sponsorship({
   checkoutMode,
+  paymentFirst,
   error,
 }: {
   checkoutMode: "live" | "test";
+  paymentFirst: boolean;
   error?: string;
 }) {
   const [billing, setBilling] = useState<SponsorBilling>("monthly");
@@ -134,9 +136,10 @@ export default function Sponsorship({
           </h2>
           <p className="mt-4 max-w-md text-sm text-muted-foreground">
             {plan.name} placement · ${plan[billing]} USD{" "}
-            {billing === "monthly" ? "per month" : "once"}. Share your brand
-            details, then complete secure checkout. We review your brand before
-            its placement goes live.
+            {billing === "monthly" ? "per month" : "once"}.{" "}
+            {paymentFirst
+              ? "Pay securely, then share your brand details for review."
+              : "Share your brand details, then complete secure checkout. We review your brand before its placement goes live."}
           </p>
           <div className="mt-8 flex min-h-40 items-center justify-center gap-4 rounded-2xl border border-dashed border-foreground/20 bg-background p-6">
             <BrandMark size={40} />
@@ -190,44 +193,50 @@ export default function Sponsorship({
               {error}
             </p>
           )}
-          <label className="block text-sm font-medium">
-            Brand name
-            <input
-              name="brand"
-              value={brand}
-              onChange={(event) => setBrand(event.target.value)}
-              required
-              minLength={2}
-              maxLength={80}
-              autoComplete="organization"
-              placeholder="Your product or company"
-              className="field mt-2"
-            />
-          </label>
-          <label className="block text-sm font-medium">
-            Website
-            <input
-              name="website"
-              type="url"
-              required
-              pattern="https://.*"
-              maxLength={500}
-              placeholder="https://your-product.com"
-              className="field mt-2"
-            />
-          </label>
-          <label className="block text-sm font-medium">
-            Logo URL{" "}
-            <span className="font-normal text-muted-foreground">optional</span>
-            <input
-              name="logo"
-              type="url"
-              pattern="https://.*"
-              maxLength={500}
-              placeholder="https://your-product.com/logo.svg"
-              className="field mt-2"
-            />
-          </label>
+          {!paymentFirst && (
+            <>
+              <label className="block text-sm font-medium">
+                Brand name
+                <input
+                  name="brand"
+                  value={brand}
+                  onChange={(event) => setBrand(event.target.value)}
+                  required
+                  minLength={2}
+                  maxLength={80}
+                  autoComplete="organization"
+                  placeholder="Your product or company"
+                  className="field mt-2"
+                />
+              </label>
+              <label className="block text-sm font-medium">
+                Website
+                <input
+                  name="website"
+                  type="url"
+                  required
+                  pattern="https://.*"
+                  maxLength={500}
+                  placeholder="https://your-product.com"
+                  className="field mt-2"
+                />
+              </label>
+              <label className="block text-sm font-medium">
+                Logo URL{" "}
+                <span className="font-normal text-muted-foreground">
+                  optional
+                </span>
+                <input
+                  name="logo"
+                  type="url"
+                  pattern="https://.*"
+                  maxLength={500}
+                  placeholder="https://your-product.com/logo.svg"
+                  className="field mt-2"
+                />
+              </label>
+            </>
+          )}
           <label className="flex items-start gap-3 text-sm text-muted-foreground">
             <input
               type="checkbox"
@@ -237,7 +246,9 @@ export default function Sponsorship({
               className="mt-1 size-4 shrink-0 accent-brand-blue"
             />
             <span>
-              I have rights to this brand and logo, and agree to the{" "}
+              {paymentFirst
+                ? "I agree to the "
+                : "I have rights to this brand and logo, and agree to the "}
               <Link
                 href="/terms#sponsorships"
                 className="text-action-accent underline"
@@ -258,9 +269,9 @@ export default function Sponsorship({
                 : `Continue to checkout · $${plan[billing]}`}
           </button>
           <p className="text-xs text-muted-foreground">
-            Brand details are sent to Dodo Payments with your checkout. Payment
-            information is collected on their hosted page. Your placement is
-            reviewed after successful payment.
+            {paymentFirst
+              ? "Dodo Payments collects billing information at checkout. Return here to enter your brand details after payment."
+              : "Dodo Payments receives your brand details and collects payment information on its hosted page. Your placement is reviewed after successful payment."}
           </p>
         </form>
       </section>

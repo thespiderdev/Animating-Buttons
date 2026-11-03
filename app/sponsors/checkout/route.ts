@@ -1,9 +1,19 @@
+import { NextResponse } from "next/server";
+import {
+  openSponsorOrder,
+  paymentFirstEnabled,
+  sponsorClaimCookie,
+  sponsorClaimMaxAge,
+} from "@/lib/sponsor-orders";
 import { sponsorshipCheckout } from "@/lib/sponsor-checkout";
 import { SITE_URL } from "@/lib/site";
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
   const host = request.headers.get("host") || new URL(request.url).host;
-  const allowed = origin === SITE_URL || origin === `https://${host}` || origin === `http://${host}`;
+  const allowed =
+    origin === SITE_URL ||
+    origin === `https://${host}` ||
+    origin === `http://${host}`;
   if (origin && !allowed)
     return new Response("Open checkout from the sponsorship page.", {
       status: 403,
@@ -14,7 +24,18 @@ export async function POST(request: Request) {
     if (raw.length > 8192) throw new Error("Keep sponsor details under 8 KB.");
     const form = new FormData();
     new URLSearchParams(raw).forEach((value, key) => form.set(key, value));
-    return Response.redirect(sponsorshipCheckout(form), 303);
+    if (!paymentFirstEnabled())
+      return Response.redirect(sponsorshipCheckout(form), 303);
+    const { url, claim } = await openSponsorOrder(form);
+    const response = NextResponse.redirect(url, 303);
+    response.cookies.set(sponsorClaimCookie, claim, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "lax",
+      path: "/sponsors",
+      maxAge: sponsorClaimMaxAge,
+    });
+    return response;
   } catch (error) {
     const params = new URLSearchParams();
     params.set(
@@ -23,6 +44,9 @@ export async function POST(request: Request) {
         ? error.message
         : "Checkout could not be opened. Please try again.",
     );
-    return new Response(null, { status: 303, headers: { Location: `/sponsors?${params}#sponsor-details` } });
+    return new Response(null, {
+      status: 303,
+      headers: { Location: `/sponsors?${params}#sponsor-details` },
+    });
   }
 }

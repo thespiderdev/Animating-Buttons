@@ -17,13 +17,9 @@ const LIVE_PRODUCTS: Record<string, string> = {
   "diamond-monthly": "pdt_0NqrLOLmmOEqf0p9JG346",
   "diamond-lifetime": "pdt_0NqrLOQbDIiTMG5UkLcpE",
 };
-export const sponsorCheckoutMode = () =>
+export const sponsorCheckoutMode = (): "live" | "test" =>
   process.env.SPONSOR_CHECKOUT_MODE === "test" ? "test" : "live";
-export function sponsorshipCheckout(form: FormData) {
-  const value = String(form.get("plan") || "");
-  const selection = sponsorshipSelection(value);
-  if (!selection)
-    throw new Error("Choose a sponsorship tier and billing option.");
+export function sponsorBrandDetails(form: FormData) {
   const brand = String(form.get("brand") || "").trim();
   if (brand.length < 2 || brand.length > 80 || /[<>\u0000-\u001f]/.test(brand))
     throw new Error("Use a brand name of 2 to 80 characters.");
@@ -51,6 +47,14 @@ export function sponsorshipCheckout(form: FormData) {
   }
   const website = publicUrl(form.get("website"), true);
   const logo = publicUrl(form.get("logo"), false);
+  return { brand, website, logo };
+}
+
+export function sponsorProduct(form: FormData) {
+  const value = String(form.get("plan") || "");
+  const selection = sponsorshipSelection(value);
+  if (!selection)
+    throw new Error("Choose a sponsorship tier and billing option.");
   if (form.get("terms") !== "accepted")
     throw new Error("Read and accept the sponsorship terms before continuing.");
   const mode = sponsorCheckoutMode();
@@ -70,6 +74,12 @@ export function sponsorshipCheckout(form: FormData) {
     throw new Error(
       "This live checkout is not configured yet. Contact the maintainer to arrange your placement.",
     );
+  return { value, selection, mode, product };
+}
+
+export function sponsorshipCheckout(form: FormData) {
+  const { brand, website, logo } = sponsorBrandDetails(form);
+  const { selection, mode, product } = sponsorProduct(form);
   const checkout = new URL(
     `https://${mode === "test" ? "test.checkout" : "checkout"}.dodopayments.com/buy/${product}`,
   );

@@ -25,9 +25,27 @@ The six live products are:
 | Diamond monthly  | `pdt_0NqrLOLmmOEqf0p9JG346` |
 | Diamond lifetime | `pdt_0NqrLOQbDIiTMG5UkLcpE` |
 
-The application does not need a Dodo API key at runtime. The server validates the selected plan, brand name, public HTTPS website/logo URLs, and terms acceptance, then redirects to the matching hosted product with quantity one. Prices come from the Dodo product, never a client-submitted amount. Order metadata carries `project`, `tier`, `billing`, `brand`, `website`, and optional `logo` values. These brand details are intended for review and eventual public display.
+The payment-first flow uses Dodo Checkout Sessions. Enable it by applying the database migration and setting a Cloudflare Worker secret for the selected Dodo environment.
 
-The completion page is informational. Visiting it, changing query parameters, or editing checkout metadata never activates a placement or proves payment.
+```sh
+npx wrangler d1 migrations apply getbuttons-sponsor-orders --remote
+npx wrangler secret put DODO_PAYMENTS_API_KEY --name getbuttons
+```
+
+Keep the key out of source control and build variables. With no key, the existing hosted checkout remains available and collects brand details before payment.
+
+With a key, buyers choose their plan and accept terms, then pay on Dodo. The same browser can return to `/sponsors/complete` for 30 days. The app reads the stored session from Dodo before showing the form and again before saving. The URL status is ignored. Brand name, website and optional logo are stored in D1 only after a successful payment, and still require manual approval.
+
+View submitted live orders from the private D1 console with:
+
+```sql
+SELECT plan, payment_id, brand, website, logo, submitted_at
+FROM sponsor_orders
+WHERE mode = 'live' AND submitted_at IS NOT NULL
+ORDER BY submitted_at DESC;
+```
+
+If the buyer loses the browser cookie, verify the Dodo receipt privately and collect their brand details through the established support contact. Sandbox submissions are excluded from live review.
 
 ## Publish a paid sponsor
 
