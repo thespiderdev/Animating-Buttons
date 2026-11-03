@@ -165,7 +165,17 @@ export function buttonSchema(button: ButtonItem) {
     description: buttonDescription(button),
     codeSampleType: "snippet",
     programmingLanguage: button.reactSource
-      ? ["TypeScript", "CSS"]
+      ? [
+          Object.keys(button.reactSource.files).some((name) =>
+            name.endsWith(".jsx"),
+          ) &&
+          !Object.keys(button.reactSource.files).some((name) =>
+            name.endsWith(".tsx"),
+          )
+            ? "JavaScript"
+            : "TypeScript",
+          "CSS",
+        ]
       : ["HTML", "CSS", ...(button.js.trim() ? ["JavaScript"] : [])],
     ...(button.styling === "tailwind"
       ? { runtimePlatform: "Tailwind CSS v4" }
@@ -205,7 +215,7 @@ export function buttonDescription(button: ButtonItem) {
   const author = button.source?.authorName || button.githubUsername;
   const styles = button.styling === "tailwind" ? "Tailwind CSS" : "CSS";
   return button.reactSource
-    ? `Preview ${title}, an animated React button by ${author}. Copy its TypeScript source or download the example with ${styles} and dependencies.`
+    ? `Preview ${title}, an animated ${button.reactSource.framework === "nextjs" ? "Next.js" : "React"} button by ${author}. Copy its component source or download the example with ${styles} and dependencies.`
     : `Preview ${title} by ${author}. Customize its HTML, ${styles} and JavaScript, then copy or download the button.`;
 }
 export function cataloguePage(value: unknown) {

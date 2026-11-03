@@ -30,6 +30,7 @@ export async function POST(
             css: source.css || "",
             js: source.js || "",
             styling: source.styling,
+            reactSource: source.reactSource,
           })
         : {};
     await writeButton({ ...code, status: data.status }, session, id);

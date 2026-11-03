@@ -179,6 +179,26 @@ export const getPublicButton = cache(
     // Public server rendering must never serialize drafts or moderation-only records.
     if (data.status !== "approved") return { state: "restricted" };
     const created = date(data.createdAt);
+    const react = data.reactSource as ButtonItem["reactSource"];
+    const reactSource =
+      (react?.framework === "react" || react?.framework === "nextjs") &&
+      react.files &&
+      Object.values(react.files).every((value) => typeof value === "string") &&
+      Object.keys(react.files).some((name) => /^Button\.(jsx|tsx)$/.test(name))
+        ? {
+            framework: react.framework,
+            files: Object.fromEntries(
+              Object.entries(react.files).filter(([name]) =>
+                /^(Button\.(jsx|tsx)|style\.css)$/.test(name),
+              ),
+            ),
+            dependencies: {
+              react: "^19.2.4",
+              "react-dom": "^19.2.4",
+              ...(react.dependencies?.motion ? { motion: "^12.40.0" } : {}),
+            },
+          }
+        : undefined;
     const remix = data.remixOf as Record<string, unknown> | null;
     const button: ButtonItem = {
       id,
@@ -197,6 +217,7 @@ export const getPublicButton = cache(
           )
         : [],
       status: "approved",
+      ...(reactSource ? { reactSource } : {}),
       styling: data.styling === "tailwind" ? "tailwind" : "css",
       compiledCss: string(data.compiledCss),
       categories: Array.isArray(data.categories)

@@ -39,6 +39,7 @@ export type ButtonItem = {
     version?: string;
   };
   reactSource?: {
+    framework?: "react" | "nextjs";
     files: Record<string, string>;
     dependencies: Record<string, string>;
   };
@@ -132,17 +133,20 @@ export async function downloadButton(button: ButtonItem) {
   button = await loadButtonSource(button);
   const { default: JSZip } = await import("jszip");
   const zip = new JSZip();
-  zip.file(
-    "index.html",
-    previewDocument({ ...button, css: "", compiledCss: "", js: "" })
-      .replace("</head>", '<link rel="stylesheet" href="style.css"></head>')
-      .replace("</body>", '<script src="app.js"></script></body>'),
-  );
+  if (!button.reactSource?.framework) {
+    zip.file(
+      "index.html",
+      previewDocument({ ...button, css: "", compiledCss: "", js: "" })
+        .replace("</head>", '<link rel="stylesheet" href="style.css"></head>')
+        .replace("</body>", '<script src="app.js"></script></body>'),
+    );
+    zip.file("app.js", button.js || "");
+  }
   zip.file("style.css", `${button.compiledCss || ""}\n${button.css || ""}`);
-  zip.file("app.js", button.js || "");
   if (button.reactSource) {
     for (const [file, content] of Object.entries(button.reactSource.files))
-      zip.file(file, content);
+      if (!button.reactSource.framework || file !== "style.css")
+        zip.file(file, content);
     zip.file(
       "package.json",
       JSON.stringify(

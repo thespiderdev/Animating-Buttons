@@ -51,3 +51,5 @@ design/shots/
 .wrangler/
 .dev.vars*
 lib/tailwind-styles.generated.json
+
+lib/react-preview.generated.json

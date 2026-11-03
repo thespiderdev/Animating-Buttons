@@ -68,9 +68,7 @@ export default async function Page({ params }: Props) {
         </>
       )}
       {button?.reactSource ? (
-        <ReactButtonViewer
-          button={{ ...button, html: "", css: "", js: "", compiledCss: "" }}
-        />
+        <ReactButtonViewer button={{ ...button, html: "", js: "" }} />
       ) : (
         <ButtonEditor key={id} id={id} initialButton={button} />
       )}

@@ -1,3 +1,4 @@
+import { prepareReactButton } from "./react-button";
 import { NextRequest } from "next/server";
 import { CATEGORIES, type ButtonCode } from "./button-tools";
 import { validateButton } from "./button-validation";
@@ -158,6 +159,19 @@ export async function writeButton(
   return result.name.split("/").pop() as string;
 }
 export async function checkedCode(data: Record<string, unknown>) {
+  if (data.reactSource !== undefined) {
+    try {
+      return await prepareReactButton(
+        data.reactSource,
+        data.css,
+        data.styling === "tailwind" ? "tailwind" : "css",
+      );
+    } catch (error) {
+      throw new ApiError(
+        error instanceof Error ? error.message : "Invalid React source.",
+      );
+    }
+  }
   if (
     ![data.html, data.css, data.js].every((value) => typeof value === "string")
   )

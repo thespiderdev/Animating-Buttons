@@ -13,9 +13,10 @@
     "build:cloudflare": "opennextjs-cloudflare build && node scripts/sanitize-worker-env.mjs",
     "preview:cloudflare": "opennextjs-cloudflare preview",
     "deploy:cloudflare": "opennextjs-cloudflare deploy",
-    "postinstall": "node scripts/prepare-tailwind.mjs"
+    "postinstall": "node scripts/prepare-tailwind.mjs && node scripts/prepare-react-preview.mjs"
   },
   "dependencies": {
+    "@babel/parser": "^7.29.12",
     "@monaco-editor/react": "^4.7.0",
     "@radix-ui/react-select": "^2.4.1",
     "@squircle-js/react": "^1.3.0",
@@ -31,6 +32,7 @@
     "react-dom": "19.2.4",
     "react-use-measure": "^2.1.7",
     "sonner": "^2.0.8",
+    "sucrase": "^3.35.1",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3"
   },

@@ -132,7 +132,15 @@ export default function AdminPanel() {
           {buttons.map((button) => (
             <div key={button.id}>
               <ButtonCard button={button} />
-              <div className="mt-3 flex gap-2">
+              <div className="mt-3 flex flex-wrap gap-2">
+                {button.reactSource?.framework && (
+                  <Link
+                    className="action-secondary flex-1"
+                    href={`/add?format=component&edit=${encodeURIComponent(button.id)}`}
+                  >
+                    Review source
+                  </Link>
+                )}
                 {status !== "approved" && (
                   <button
                     className="action-primary flex-1"

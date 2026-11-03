@@ -5,6 +5,8 @@ import { buttonTitle } from "@/lib/button-code";
 import { buttonCategories, categoryLabel } from "@/lib/button-tools";
 import ButtonCredit from "@/components/community/button-credit";
 export default function ButtonInfo({ button }: { button: ButtonItem }) {
+  const framework =
+    button.reactSource?.framework === "nextjs" ? "Next.js" : "React";
   return (
     <section
       aria-labelledby="button-usage"
@@ -17,8 +19,8 @@ export default function ButtonInfo({ button }: { button: ButtonItem }) {
         {buttonTitle(button)} is an animated{" "}
         {button.reactSource
           ? button.styling === "tailwind"
-            ? "React and Tailwind CSS"
-            : "React and CSS"
+            ? `${framework} and Tailwind CSS`
+            : `${framework} and CSS`
           : button.styling === "tailwind"
             ? "Tailwind CSS v4"
             : "CSS"}{" "}
@@ -38,9 +40,11 @@ export default function ButtonInfo({ button }: { button: ButtonItem }) {
         <div>
           <dt className="font-medium">Using this example</dt>
           <dd className="mt-1 text-muted-foreground">
-            {button.reactSource
-              ? "Copy a TSX file or download the original source and standalone demo."
-              : "Copy the HTML or download index.html, style.css and app.js."}{" "}
+            {button.reactSource?.framework
+              ? "Copy the component or download its original source, stylesheet and dependencies."
+              : button.reactSource
+                ? "Copy a TSX file or download the original source and standalone demo."
+                : "Copy the HTML or download index.html, style.css and app.js."}{" "}
             Test keyboard focus, motion and contrast in your own project.
           </dd>
         </div>

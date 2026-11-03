@@ -33,3 +33,9 @@ Downloads include HTML, CSS, JavaScript and a README with creator/source credit.
 ## Verification
 
 Run `npm test`, `npm run typecheck`, `npm run lint` and `npm run build`. Tests cover legacy preview construction, compiled styles, starter validation, rejected layouts, categories, Tailwind compilation and collection imports. Use a Firebase emulator or disposable development Firebase project to test authenticated saves, owner edits and administrator approval. Do not create test submissions in the production collection.
+
+## React and Next.js submissions
+
+Choose **React & Next.js** in the workshop and paste one JSX or TSX client component with a default export. The preview supports React and Motion imports, CSS, and Tailwind utility classes. Next.js components can use client-side state and event handlers. Use a self-contained button component with up to six controls. Server components, app routes, local imports, and other packages require a separate runtime.
+
+GitHub sign-in is required to submit. The original file goes to moderation and, after approval, is available for copying or downloading with its stylesheet and dependency list.

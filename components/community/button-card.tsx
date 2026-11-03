@@ -25,9 +25,13 @@ export default function ButtonCard({ button }: { button: ButtonItem }) {
   const [likedUsers, setLikedUsers] = useState(button.likedUsers || []);
   const [busy, setBusy] = useState(false);
   const title = buttonTitle(button);
+  const hostedPreview = button.source || button.reactSource?.framework;
   const source = useMemo(
-    () => previewDocument(button, resolvedTheme !== "light"),
-    [button, resolvedTheme],
+    () =>
+      hostedPreview
+        ? undefined
+        : previewDocument(button, resolvedTheme !== "light"),
+    [button, hostedPreview, resolvedTheme],
   );
   const liked = !!username && likedUsers.includes(username);
 
@@ -68,18 +72,24 @@ export default function ButtonCard({ button }: { button: ButtonItem }) {
   return (
     <article className="group flex min-w-0 flex-col rounded-[32px] border border-black/[0.04] bg-[#F5F5F7] p-2 dark:border-white/[0.08] dark:bg-[#121212]">
       <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-black/[0.06] bg-white dark:border-white/10 dark:bg-neutral-950">
-        <iframe
-          src={
-            button.source
-              ? `/api/catalogue/${encodeURIComponent(button.id)}/preview?theme=${resolvedTheme === "light" ? "light" : "dark"}&v=${encodeURIComponent(button.source.version || "1")}`
-              : undefined
-          }
-          srcDoc={button.source ? undefined : source}
-          title={`${title} interactive preview`}
-          sandbox="allow-scripts"
-          loading="lazy"
-          className="h-full w-full border-0"
-        />
+        {button.reactSource?.framework && button.status !== "approved" ? (
+          <div className="grid h-full place-content-center px-4 text-center text-sm text-muted-foreground">
+            Open the component source to preview it.
+          </div>
+        ) : (
+          <iframe
+            src={
+              hostedPreview
+                ? `/api/catalogue/${encodeURIComponent(button.id)}/preview?theme=${resolvedTheme === "light" ? "light" : "dark"}&v=${encodeURIComponent(button.source?.version || "1")}`
+                : undefined
+            }
+            srcDoc={source}
+            title={`${title} interactive preview`}
+            sandbox="allow-scripts"
+            loading="lazy"
+            className="h-full w-full border-0"
+          />
+        )}
       </div>
       <div className="flex items-start justify-between gap-3 px-3 pb-2 pt-3">
         <div className="min-w-0">

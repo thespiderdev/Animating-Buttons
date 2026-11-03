@@ -8,8 +8,10 @@ import { buttonTitle, downloadButton, type ButtonItem } from "@/lib/community";
 import Select from "@/components/ui/select";
 import ButtonCredit from "./button-credit";
 import SaveButton from "./save-button";
+import { useCommunity } from "./provider";
 
 export default function ReactButtonViewer({ button }: { button: ButtonItem }) {
+  const { user, username, isAdmin } = useCommunity();
   const files = button.reactSource!.files;
   const implementation = Object.keys(files).find(
     (name) =>
@@ -78,6 +80,20 @@ export default function ReactButtonViewer({ button }: { button: ButtonItem }) {
         </div>
         <div className="flex flex-wrap gap-2">
           <SaveButton button={button} />
+          {button.reactSource?.framework &&
+            user &&
+            (isAdmin ||
+              (button.ownerUid
+                ? button.ownerUid === user.uid
+                : button.githubUsername.toLowerCase() ===
+                  username.toLowerCase())) && (
+              <Link
+                className="action-secondary"
+                href={`/add?format=component&edit=${encodeURIComponent(button.id)}`}
+              >
+                Edit component
+              </Link>
+            )}
           <button
             className="action-secondary"
             onClick={() =>

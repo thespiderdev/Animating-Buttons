@@ -39,10 +39,14 @@ export async function POST(request: NextRequest) {
           403,
         );
     }
+    if (existing && Boolean(existing.reactSource) !== "reactSource" in code)
+      throw new ApiError(
+        "Keep the original submission format when editing a button.",
+      );
     const values: Record<string, unknown> = {
       ...code,
       title: data.title.trim(),
-      categories: validCategories(data.categories),
+      categories: validCategories(data.categories ?? existing?.categories),
       status:
         session.admin && existing ? existing.status || "pending" : "pending",
     };
